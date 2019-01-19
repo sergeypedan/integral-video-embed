@@ -1,0 +1,4 @@
+inherit_from:
+  - https://raw.githubusercontent.com/bkuhlmann/code_quality/2.5.0/configurations/rubocop/ruby.yml
+  - https://raw.githubusercontent.com/bkuhlmann/code_quality/2.5.0/configurations/rubocop/rspec.yml
+
