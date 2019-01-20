@@ -9,14 +9,14 @@ Gem::Specification.new do |spec|
   spec.platform = Gem::Platform::RUBY
   spec.authors = ["Sergey Pedan"]
   spec.email = ["sergey.pedan@gmail.com"]
-  spec.homepage = ""
-  spec.summary = ""
+  spec.homepage = "https://github.com/sergeypedan/integral-video-embed"
+  spec.summary = "Helps embed video from known providers"
   spec.license = "MIT"
 
   spec.metadata = {
-    "source_code_uri" => "",
-    "changelog_uri" => "/blob/master/CHANGES.md",
-    "bug_tracker_uri" => "/issues"
+    "source_code_uri" => "https://github.com/sergeypedan/integral-video-embed",
+    "changelog_uri" => "https://github.com/sergeypedan/integral-video-embed/blob/master/CHANGES.md",
+    "bug_tracker_uri" => "https://github.com/sergeypedan/integral-video-embed/issues"
   }
 
 

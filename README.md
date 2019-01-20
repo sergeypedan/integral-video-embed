@@ -23,11 +23,12 @@
 
 ## Features
 
-## Screencasts
+Helps embed videos from known providers like YouTube into HTML
 
 ## Requirements
 
-1. [Ruby 2.5.1](https://www.ruby-lang.org)
+1. [Ruby 2.5.0+](https://www.ruby-lang.org)
+2. Ruby on Rails
 
 ## Setup
 
