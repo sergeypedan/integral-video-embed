@@ -45,11 +45,11 @@ Probably, within a Rails helper:
 
 ```ruby
 def embed_youtube(uid)
-  Integral::Video::Embed::Html.embed_video(uid, provider: "YouTube", embed_method: :bootstrap, proportions: "16by9")
+  Integral::Video::Embed::Html.embed_video(uid, provider: "YouTube", embed_method: :bootstrap, proportions: "16by9").html_safe
 end
 
 def embed_vk(uid, hash:)
-  Integral::Video::Embed::Html.embed_video(uid, provider: "Вконтакте")
+  Integral::Video::Embed::Html.embed_video(uid, provider: "Вконтакте").html_safe
 end
 ```
 
