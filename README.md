@@ -28,7 +28,6 @@ Helps embed videos from known providers like YouTube into HTML
 ## Requirements
 
 1. [Ruby 2.5.0+](https://www.ruby-lang.org)
-2. Ruby on Rails
 
 ## Setup
 
@@ -41,6 +40,25 @@ Add the following to your Gemfile:
     gem "integral-video-embed"
 
 ## Usage
+
+Probably, within a Rails helper:
+
+```ruby
+def embed_youtube(uid)
+  Integral::Video::Embed::Html.embed_video(uid, provider: "YouTube", embed_method: :bootstrap, proportions: "16by9")
+end
+
+def embed_vk(uid, hash:)
+  Integral::Video::Embed::Html.embed_video(uid, provider: "Вконтакте")
+end
+```
+
+and within a Rails view:
+
+```slim
+<%= embed_youtube(@video.uid) %>
+<%= embed_vk(@video.uid, @video.uhash) %>
+```
 
 ## Tests
 
