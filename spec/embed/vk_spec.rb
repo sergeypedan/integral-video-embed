@@ -35,7 +35,9 @@ RSpec.describe RSpec.describe Integral::Video::Embed::Html, ".embed_video" do
     context "all arguments are good" do
       it "outputs correct HTML" do
         oid, id = uid.split("_")
-        expect(subject).to eq "<iframe width=\"#{width}\" height=\"#{height}\" src=\"https://vk.com/video_ext.php?oid=#{oid}&id=#{id}&hash=#{hash}&hd=2\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+        expect(subject).to eq <<~HEREDOC
+                                <iframe width="#{width}" height="#{height}" src="https://vk.com/video_ext.php?oid=#{oid}&id=#{id}&hash=#{hash}&hd=2" frameborder="0" allow="autoplay; encrypted-media" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                              HEREDOC
       end
     end
   end

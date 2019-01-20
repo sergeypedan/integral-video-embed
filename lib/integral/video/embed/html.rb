@@ -30,16 +30,18 @@ module Integral
           def bootstrap_embed_html(src, proportions)
             fail ArgumentError, "`proportions` must be provided to embed via Bootstrap strategy" unless PROPORTIONS.include? proportions
             <<~HEREDOC
-              "<div class=\"embed-responsive embed-responsive-#{proportions}\">"
-                "<iframe class=\"embed-responsive-item\" src=\"#{src}\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
-              "</div>"
+              <div class="embed-responsive embed-responsive-#{proportions}">
+                <iframe class="embed-responsive-item" src="#{src}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              </div>
             HEREDOC
           end
 
           def generic_embed_html(src, width, height)
             fail ArgumentError,  "`width` must be an Integer for generic embed strategy" unless width.is_a?  Integer
             fail ArgumentError, "`height` must be an Integer for generic embed strategy" unless height.is_a? Integer
-            "<iframe width=\"#{width}\" height=\"#{height}\" src=\"#{src}\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+            <<~HEREDOC
+              <iframe width="#{width}" height="#{height}" src="#{src}" frameborder="0" allow="autoplay; encrypted-media" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            HEREDOC
           end
         end
 
