@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata = {
     "source_code_uri" => "https://github.com/sergeypedan/integral-video-embed",
-    "changelog_uri" => "https://github.com/sergeypedan/integral-video-embed/blob/master/CHANGES.md",
+    "changelog_uri"   => "https://github.com/sergeypedan/integral-video-embed/blob/master/CHANGES.md",
     "bug_tracker_uri" => "https://github.com/sergeypedan/integral-video-embed/issues"
   }
 
