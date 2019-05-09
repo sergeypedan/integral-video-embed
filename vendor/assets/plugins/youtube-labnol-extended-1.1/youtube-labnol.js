@@ -24,7 +24,15 @@
 	}
 
 	function build_iframe_src(video_id) {
-		return "http://www.youtube.com/embed/" + video_id + "?autoplay=1&autohide=2&border=0&wmode=opaque&enablejsapi=1&controls=0&showinfo=0"
+		return "http://www.youtube.com/embed/"
+						+ video_id
+						+ "?" + "autoplay=" + "1"
+						+ "&" + "autohide=" + "2"
+						+ "&" + "border=" + "0"
+						+ "&" + "controls=" + "1"
+						+ "&" + "enablejsapi=" + "1"
+						+ "&" + "showinfo=" + "0"
+						+ "&" + "wmode=" + "opaque"
 	}
 
 	function play_button_html(overriding_src) {

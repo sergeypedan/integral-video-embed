@@ -36,8 +36,9 @@ module Integral
 			# Methods
 
 			def initialize(name)
+				fail ArgumentError, "`Provider name` must be provided" if name.nil? || name == ""
+				self.class.find_by(name: name) || fail(ArgumentError, "Provider `name` not supported. Currently supported: #{self.class.names.join(", ")}")
 				@name = name
-				fail ArgumentError, "`name` must be provided, you passed #{name.inspect}" if name.nil? || name == ""
 			end
 
 
@@ -52,6 +53,16 @@ module Integral
 				else
 					provider_hash[:embed_url].sub("${uid}", uid)
 				end
+			end
+
+
+			def fa_icon_id
+				provider_hash[:fa_icon]
+			end
+
+
+			def fa_icon
+				"<span class=\"fa fa-#{fa_icon_id}\" style=\"color: #{provider_hash[:color]}\"></span>".html_safe
 			end
 
 
