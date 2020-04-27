@@ -44,7 +44,7 @@
 	}
 
 	function thumbnail_html(video_id) {
-		return "<img class=\"labnol-thumb\" src=\"http://i.ytimg.com/vi/" + video_id + "/hqdefault.jpg\">";
+		return "<img class=\"labnol-thumb\" src=\"http://i.ytimg.com/vi/" + video_id + "/maxresdefault.jpg\">";
 	}
 
 

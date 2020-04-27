@@ -10,7 +10,7 @@ RSpec.describe Integral::Video::Provider, "poster_url" do
 
   context "poster_url exists" do
     let(:name) { "YouTube" }
-    it { is_expected.to eq "http://i.ytimg.com/vi/123/hqdefault.jpg" }
+    it { is_expected.to eq "http://i.ytimg.com/vi/123/maxresdefault.jpg" }
   end
 
   context "poster_url does not exist" do
