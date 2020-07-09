@@ -11,7 +11,7 @@ module Integral
 					fa_icon:    "youtube",
 					name:       "YouTube",
 					page_url:   "https://youtube.com/watch/?v=${uid}",
-					poster_url: "http://i.ytimg.com/vi/${uid}/maxresdefault.jpg",
+					poster_url: "https://i.ytimg.com/vi/${uid}/maxresdefault.jpg",
 					uid:        "youtube"
 				}, {
 					color:      "#00ADEF",

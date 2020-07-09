@@ -5,7 +5,7 @@ module Integral
     module Poster
 
       def youtube_poster(uid)
-        "http://i.ytimg.com/vi/#{uid}/maxresdefault.jpg"
+        "https://i.ytimg.com/vi/#{uid}/maxresdefault.jpg"
       end
 
     end

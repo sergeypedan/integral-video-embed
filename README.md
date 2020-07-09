@@ -1,6 +1,6 @@
 # Integral Video Embed
 
-[![Gem Version](https://badge.fury.io/rb/integral-video-embed.svg)](http://badge.fury.io/rb/integral-video-embed)
+[![Gem Version](https://badge.fury.io/rb/integral-video-embed.svg)](https://badge.fury.io/rb/integral-video-embed)
 
 <!-- Tocer[start]: Auto-generated, don't remove. -->
 
@@ -123,7 +123,7 @@ Read [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## License
 
-Copyright 2019 [Integral Design](http://integral-design.ru).
+Copyright 2019 [Integral Design](https://integral-design.ru).
 Read [LICENSE](LICENSE.md) for details.
 
 ## History
@@ -134,4 +134,4 @@ Built with [Gemsmith](https://github.com/bkuhlmann/gemsmith).
 ## Credits
 
 Developed by [Sergey Pedan]() at
-[Integral Design](http://integral-design.ru).
+[Integral Design](https://integral-design.ru).

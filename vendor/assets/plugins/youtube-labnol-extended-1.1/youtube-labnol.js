@@ -24,7 +24,7 @@
 	}
 
 	function build_iframe_src(video_id) {
-		return "http://www.youtube.com/embed/"
+		return "https://www.youtube.com/embed/"
 						+ video_id
 						+ "?" + "autoplay=" + "1"
 						+ "&" + "autohide=" + "2"
@@ -44,7 +44,7 @@
 	}
 
 	function thumbnail_html(video_id) {
-		return "<img alt=\"Заставка видео\" class=\"labnol-thumb\" src=\"http://i.ytimg.com/vi/" + video_id + "/maxresdefault.jpg\" loading=\"lazy\">";
+		return "<img alt=\"Заставка видео\" class=\"labnol-thumb\" src=\"https://i.ytimg.com/vi/" + video_id + "/maxresdefault.jpg\" loading=\"lazy\">";
 	}
 
 
