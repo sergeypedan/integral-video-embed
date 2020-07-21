@@ -5,11 +5,16 @@ module Integral
     module Embed
       module Labnol
         class << self
-          def html(uid)
+          def html(uid, thumbnail: nil)
             fail ArgumentError, "`uid` must be provided, you passed #{uid.inspect}" if uid.nil? || uid == ""
-            <<~HEREDOC
-              <div class="labnol-youtube-player" data-id="#{uid}"></div>
-            HEREDOC
+            thumbnail = nil if thumbnail == ""
+            [
+              "<div",
+              " class=\"labnol-youtube-player\"",
+              " data-id=\"#{uid}\"",
+             (" data-thumbnail=\"#{thumbnail}\"" if thumbnail),
+              "></div>"
+            ].reject(&:nil?).join
           end
         end
       end
