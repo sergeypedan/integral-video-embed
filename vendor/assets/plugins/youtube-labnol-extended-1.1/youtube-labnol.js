@@ -34,6 +34,7 @@
     params.append("showinfo",    0)
     params.append("wmode", "opaque")
     url.search   = params
+    url.pathname = "/embed/" + video_id
     return url.href
   }
 
