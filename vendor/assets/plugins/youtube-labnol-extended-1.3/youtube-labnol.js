@@ -9,6 +9,7 @@
     var iframe     = iframe_HTML_node(iframe_src)
     mount_div.innerHTML = null // to delete poster & button
     mount_div.appendChild(iframe)
+    mount_div.removeAttribute("data-id")
   }
 
 
@@ -87,7 +88,6 @@
     var custom_thumbnail_url = mount_div.dataset.thumbnail || null
     var button_URL           = mount_div.dataset.buttonSrc || null
 
-    mount_div.removeAttribute("data-id")
     mount_div.removeAttribute("data-thumbnail")
     mount_div.innerHTML = thumbnail_html(video_id, custom_thumbnail_url) + play_button_HTML(button_URL)
     mount_div.onclick   = replace_with_iframe_html
