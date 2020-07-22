@@ -1,0 +1,44 @@
+.labnol
+  &__youtube-player
+    margin: 0 auto
+    background-color: black
+    cursor: pointer
+    height: 100%
+    overflow: hidden
+    // assuming that the video has a 16:9 ratio
+    padding-bottom: 56.25%
+    position: relative
+    width: 100%
+
+    &:hover, &:focus
+      .labnol__play-button
+        opacity: 1
+
+  &__thumb
+    bottom: 0
+    display: block
+    height: auto
+    left: -1px
+    margin: auto
+    position: absolute
+    right: -1px
+    top: 0
+    width: 102%
+
+  &__play-button
+    background: url("button.svg") no-repeat
+    height: 48px
+    left: 50%
+    margin-left: calc(68px / -2)
+    margin-top:  calc(48px / -2)
+    position: absolute
+    top: 50%
+    width: 68px
+    opacity: 0.7
+
+  &__iframe
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%

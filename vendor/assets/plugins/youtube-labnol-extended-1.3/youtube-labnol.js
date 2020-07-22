@@ -5,8 +5,8 @@
   function replace_with_iframe_html() {
     var mount_div  = this
     var video_id   = extract_video_id(mount_div)
-    var iframe_src = build_iframe_src(video_id)
-    var iframe     = iframe_html_node(iframe_src)
+    var iframe_src = build_iframe_URL(video_id)
+    var iframe     = iframe_HTML_node(iframe_src)
     mount_div.innerHTML = null // to delete poster & button
     mount_div.appendChild(iframe)
   }
@@ -14,17 +14,19 @@
 
   // Generators
 
-  function iframe_html_node(iframe_src) {
+  function iframe_HTML_node(iframe_src) {
     if (!iframe_src) { console.warn("No iframe_src"); return null }
     var iframe = document.createElement("iframe")
+    // iframe.allowfullscreen = ""
+    // iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    iframe.classList.add("labnol__iframe")
+    iframe.frameBorder = 0
     iframe.src = iframe_src
-    iframe.frameborder = 0
-    iframe.classList.add("labnol-iframe")
     return iframe
   }
 
-  function build_iframe_src(video_id) {
-    var url    = new URL("https://www.youtube.com/embed/")
+  function build_iframe_URL(video_id) {
+    var url    = new URL("https://www.youtube.com")
     var params = new URLSearchParams()
     params.append("autoplay",    1)
     params.append("autohide",    2)
@@ -40,7 +42,7 @@
 
   function play_button_HTML(overriding_src) {
     var div = document.createElement("div")
-    div.classList.add("labnol-play-button")
+    div.classList.add("labnol__play-button")
     if (overriding_src) div.style.backgroundImage = "url(" + overriding_src + ")"
     return div.outerHTML
   }
@@ -58,7 +60,7 @@
     img.alt = "Заставка видео"
     img.src = thumbnail_url(video_id, custom_URL)
     img.loading = "lazy"
-    img.classList.add("labnol-thumb")
+    img.classList.add("labnol__thumb")
     return img.outerHTML
   }
 
@@ -66,7 +68,7 @@
   // Finders
 
   function container_divs() {
-    return document.getElementsByClassName("labnol-youtube-player")
+    return document.getElementsByClassName("labnol__youtube-player")
   }
 
   function extract_video_id(mount_div) {
@@ -79,13 +81,15 @@
   Array.from(container_divs()).forEach(function(mount_div) {
     if (!mount_div) { console.warn("No mount_div"); return null }
 
-    var video_id  = extract_video_id(mount_div)
+    var video_id = extract_video_id(mount_div)
     if (!video_id) { console.warn("No `video_id` in node", mount_div); return null }
 
-    var custom_thumbnail_URL = mount_div.dataset.thumbnail || null
+    var custom_thumbnail_url = mount_div.dataset.thumbnail || null
     var button_URL           = mount_div.dataset.buttonSrc || null
 
-    mount_div.innerHTML = thumbnail_html(video_id, custom_thumbnail_URL) + play_button_HTML(button_URL)
+    mount_div.removeAttribute("data-id")
+    mount_div.removeAttribute("data-thumbnail")
+    mount_div.innerHTML = thumbnail_html(video_id, custom_thumbnail_url) + play_button_HTML(button_URL)
     mount_div.onclick   = replace_with_iframe_html
   })
 

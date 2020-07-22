@@ -10,7 +10,7 @@ module Integral
             thumbnail = nil if thumbnail == ""
             [
               "<div",
-              " class=\"labnol-youtube-player\"",
+              " class=\"labnol__youtube-player\"",
               " data-id=\"#{uid}\"",
              (" data-thumbnail=\"#{thumbnail}\"" if thumbnail),
               "></div>"
