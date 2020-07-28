@@ -14,7 +14,7 @@ module Integral
         end
 
         def self.version
-          "0.1.9"
+          "0.1.10"
         end
 
         def self.version_label
