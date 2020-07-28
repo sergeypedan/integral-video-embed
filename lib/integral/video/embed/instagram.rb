@@ -58,7 +58,7 @@ module Integral
                 </div>
               </blockquote>
 
-              <script async src="https//www.instagram.com/embed.js"></script>
+              <script async src="https://www.instagram.com/embed.js"></script>
             HEREDOC
           end
         end
