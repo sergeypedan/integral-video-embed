@@ -20,18 +20,18 @@ Gem::Specification.new do |spec|
   }
 
 
-  spec.required_ruby_version = "~> 2.5"
-  spec.add_development_dependency "bundler-audit", "~> 0.6"
-  spec.add_development_dependency "gemsmith", "~> 12.4"
-  spec.add_development_dependency "git-cop", "~> 2.2"
-  spec.add_development_dependency "guard-rspec", "~> 4.7"
-  spec.add_development_dependency "pry", "~> 0.10"
-  spec.add_development_dependency "pry-byebug", "~> 3.5"
-  spec.add_development_dependency "rake", "~> 12.3"
-  spec.add_development_dependency "reek", "~> 5.0"
-  spec.add_development_dependency "rspec", "~> 3.8"
-  spec.add_development_dependency "rubocop", "~> 0.60"
-  spec.add_development_dependency "rubocop-rspec", "~> 1.30"
+  spec.required_ruby_version = ">= 2.5"
+  spec.add_development_dependency "bundler-audit"
+  spec.add_development_dependency "gemsmith"
+  spec.add_development_dependency "git-cop"
+  spec.add_development_dependency "guard-rspec"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "pry-byebug"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "reek"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rubocop"
+  spec.add_development_dependency "rubocop-rspec"
 
   spec.files = Dir["lib/**/*"]
   spec.extra_rdoc_files = Dir["README*", "LICENSE*"]
